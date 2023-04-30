@@ -24,7 +24,7 @@ export default function Modal({
 }: PropsWithChildren<ModalProps>) {
   const modalRef = useRef<HTMLDivElement>(null)
 
-  useWhenClickedOutside(() => onClose?.(), modalRef)
+  // useWhenClickedOutside(() => onClose?.(), modalRef)
   useEventListener<KeyboardEvent>('keydown', (event) => {
     if (show && event.key === 'Escape') {
       onClose?.()
